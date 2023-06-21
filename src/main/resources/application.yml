@@ -1,0 +1,9 @@
+#server ??(????? ???? ???)
+server:
+  port: 8088
+
+#log관련
+logging:
+  level:
+#   springframework관련 사항을 DEBUG수준으로 로깅할 예정
+    org.springframework: DEBUG
