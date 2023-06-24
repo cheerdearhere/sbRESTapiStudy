@@ -2,8 +2,34 @@
 server:
   port: 8088
 
-#log관련
+spring:
+#  application:
+#    name:
+  #  datasource
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+  #Java Persistence API log/ h2 database log
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+
+#security
+#security:
+#  user:
+#    name: username
+#    password: password
+
+#log관련: springframework관련 사항을 DEBUG수준으로 로깅할 예정
 logging:
   level:
-#   springframework관련 사항을 DEBUG수준으로 로깅할 예정
     org.springframework: DEBUG
+
+
+
+
+
