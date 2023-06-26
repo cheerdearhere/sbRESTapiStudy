@@ -1,35 +1,24 @@
-#server ??(????? ???? ???)
 server:
   port: 8088
-
-spring:
-#  application:
-#    name:
-  #  datasource
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-  #Java Persistence API log/ h2 database log
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: true
-  h2:
-    console:
-      enabled: true
-
-#security
-#security:
-#  user:
-#    name: username
-#    password: password
-
-#log관련: springframework관련 사항을 DEBUG수준으로 로깅할 예정
+  servlet:
+    context-path: "/"
 logging:
   level:
-    org.springframework: DEBUG
-
-
-
-
-
+    org:
+      springframework: fatal
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?allowMultiQueries=true
+    username: root
+    password: '*23#dpffla511'
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+mybatis:
+  type-aliases-package: com.example.restfulwebservice.user
+  mapper-locations: classpath:mapper/*.xml
