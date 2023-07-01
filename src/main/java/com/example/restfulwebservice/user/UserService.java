@@ -18,11 +18,10 @@ public class UserService {
     private static int usersCnt = 0;
 
     //dummydata입력(constructor)
-    //dummydata입력(constructor)
     static {
-        users.add(new User(1,"kenneth",new Date()));
-        users.add(new User(2,"Alice",new Date()));
-        users.add(new User(3,"Elena",new Date()));
+        users.add(new User(1,"kenneth","","", new Date()));
+        users.add(new User(2,"Alice","","",new Date()));
+        users.add(new User(3,"Elena","",""  ,new Date()));
         usersCnt = users.size();
     }
 

@@ -11,14 +11,41 @@ spring:
     serialization:
       fail-on-empty-beans: false
   datasource:
+  #mySQL
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/testdb?allowMultiQueries=true
     username: root
     password: '*23#dpffla511'
+    #mariaDB
+#      driver-class-name: org.mariadb.jdbc.Driver
+#      url: jdbc:mariadb://localhost:3306/testdata?allowMultiQueries=true
+#      username: ***
+#      password: ***
+    #postgresql
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhaost/testdb
+#    username: ***
+#    password: ***
+  #mongoDB
+#  data:
+#    mongodb:
+#      host: { 주소 }
+#      port: { db port }
+#      uri: {URI}
+#      database: {컬렉션 이름}
+#      username: ****
+#      password: ****
   jpa:
     show-sql: true
     hibernate:
+#      jpa가 db에 table을 생성/제거할 권한 지정
       ddl-auto: none
+
+  #h2 database
+#h2:
+#  console:
+#    enabled: true
+#mybatis config(mapping data)
 mybatis:
   type-aliases-package: com.example.restfulwebservice.user
   mapper-locations: classpath:mapper/*.xml
