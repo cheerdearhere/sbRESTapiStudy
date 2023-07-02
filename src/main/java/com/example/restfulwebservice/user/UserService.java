@@ -19,9 +19,9 @@ public class UserService {
 
     //dummydata입력(constructor)
     static {
-        users.add(new User(1,"kenneth","","", new Date()));
-        users.add(new User(2,"Alice","","",new Date()));
-        users.add(new User(3,"Elena","",""  ,new Date()));
+        users.add(new User(1,"kenneth","","", new Date(),new ArrayList<>()));
+        users.add(new User(2,"Alice","","",new Date(),new ArrayList<>()));
+        users.add(new User(3,"Elena","",""  ,new Date(),new ArrayList<>()));
         usersCnt = users.size();
     }
 

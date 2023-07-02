@@ -39,7 +39,7 @@ spring:
     show-sql: true
     hibernate:
 #      jpa가 db에 table을 생성/제거할 권한 지정
-      ddl-auto: none
+      ddl-auto: create
 
   #h2 database
 #h2:
